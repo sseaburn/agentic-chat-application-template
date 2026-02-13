@@ -46,7 +46,7 @@ export function ChatInput({ onSend, disabled }: ChatInputProps) {
           value={value}
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Type a message..."
+          placeholder="Enter a historical figure's name..."
           disabled={disabled}
           className="max-h-32 min-h-10 resize-none border-0 bg-transparent shadow-none focus-visible:ring-0"
           rows={1}
@@ -62,7 +62,7 @@ export function ChatInput({ onSend, disabled }: ChatInputProps) {
         </Button>
       </div>
       <p className="text-muted-foreground/50 mt-1.5 text-center text-xs">
-        Enter to send · Shift+Enter for new line
+        Enter to generate · Try &quot;Albert Einstein&quot; or &quot;Cleopatra&quot;
       </p>
     </div>
   );
