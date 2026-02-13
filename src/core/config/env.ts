@@ -33,6 +33,9 @@ export const env = {
   LOG_LEVEL: getOptionalEnv("LOG_LEVEL", "info"),
   APP_NAME: getOptionalEnv("APP_NAME", "ai-opti-nextjs-starter"),
 
+  // Workshop table prefix (optional - if set, app tables are prefixed e.g. "cole_projects")
+  TABLE_PREFIX: process.env["TABLE_PREFIX"] ?? "",
+
   // Supabase config (required)
   NEXT_PUBLIC_SUPABASE_URL: getRequiredEnv("NEXT_PUBLIC_SUPABASE_URL"),
   NEXT_PUBLIC_SUPABASE_ANON_KEY: getSupabaseKey(),
@@ -40,9 +43,8 @@ export const env = {
   // Database config (required)
   DATABASE_URL: getRequiredEnv("DATABASE_URL"),
 
-  // OpenRouter config (LLM)
-  OPENROUTER_API_KEY: getRequiredEnv("OPENROUTER_API_KEY"),
-  OPENROUTER_MODEL: getOptionalEnv("OPENROUTER_MODEL", "anthropic/claude-haiku-4.5"),
+  // Gemini config (LLM + image generation)
+  GEMINI_API_KEY: getRequiredEnv("GEMINI_API_KEY"),
 } as const;
 
 export type Env = typeof env;
