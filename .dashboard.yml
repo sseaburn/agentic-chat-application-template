@@ -1,0 +1,7 @@
+version: "1"
+name: "agentic-chat-application-template"
+type: simple
+ports:
+  - APP_PORT
+base_image: node:20-alpine
+healthcheck: /
